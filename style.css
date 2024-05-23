@@ -5,22 +5,18 @@
 }
 
 body {
-  font-family: system-ui;
+  font-family: "Roboto", "Poppins", "Rubik" system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
 }
 
-header {
-  margin-bottom: 4rem;
-}
-
 .wrapper-header {
-  margin-inline: auto;
-
   display: flex;
-  justify-content: flex-end;
-  gap: 0;
+  justify-content: center;
+  font-family: "Poppins", "Roboto", sans-serif;
 }
 
 .wrapper-header-skew {
@@ -45,7 +41,12 @@ header {
   z-index: -1;
   background-image: var(--gradient-color);
   transform: skewY(var(--skew-angle)) translateY(var(--translate-y));
-  /* height: 500px; */
+}
+
+.wrapper-header-img {
+  position: relative;
+  text-align: center;
+  z-index: 10;
 }
 
 .header-img {
@@ -53,13 +54,14 @@ header {
   z-index: 2;
 }
 
-h1 {
+.wrapper-header-img > div {
   position: absolute;
-  z-index: 3;
-  top: 400px;
-  right: 940px;
-  text-wrap: nowrap;
-  border: 1px solid black;
+  top: 80%;
+  left: 20%;
+}
+
+h2 {
+  font-family: "Poppins", "Roboto", sans-serif;
 }
 
 .wrapper-about {
@@ -72,6 +74,8 @@ h1 {
   width: 80%;
   max-width: 2000px;
   z-index: 1;
+
+  font-family: "Rubik", "Roboto", "Poppins" sans-serif;
 }
 
 .wrapper-icon {
@@ -85,6 +89,7 @@ h1 {
 /* Main start */
 
 .wrapper-main {
+  font-family: "Rubik", "Roboto", sans-serif;
   display: grid;
   gap: 2em;
   padding: 0 2em;
@@ -135,10 +140,90 @@ h2 {
 h3 {
   margin: 0;
   grid-area: name;
+  font-family: "Poppins";
 }
 
 .wrapper-project-about > p {
   grid-area: text;
   font-size: 14px;
   margin-top: 0;
+}
+
+/* Main end */
+
+/* Footer start */
+
+.footer {
+  background: linear-gradient(
+    to right bottom,
+    #0044af,
+    #006ecd,
+    #0093d7,
+    #00b5d5,
+    #23d4cf
+  );
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2em;
+  gap: 2em;
+
+  font-family: "Rubik", "Roboto", sans-serif;
+}
+
+.footer-left {
+  margin-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  margin: 0;
+  font-size: 40px;
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+.footer-left p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.footer-left p:nth-child(4) {
+  margin-top: 0;
+}
+
+.footer-left > a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5em;
+  margin-block: 0.5em;
+  max-width: 80%;
+}
+
+/* phone and mail svg */
+.footer-left > a > svg {
+  width: 30px;
+  fill: #fff;
+}
+
+.wrapper-footer-icon {
+  margin-block: 1.5em;
+  display: flex;
+  justify-content: start;
+  gap: 2.5em;
+}
+
+.wrapper-footer-icon > * {
+  width: 80px;
+  fill: #fff;
+}
+
+.github-img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(358deg)
+    brightness(105%) contrast(106%);
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
 }
