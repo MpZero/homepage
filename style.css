@@ -260,3 +260,36 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
+/* Tablet layout */
+@media screen and (max-width: 900px) {
+  .wrapper-header {
+    align-items: center;
+  }
+
+  .wrapper-header-img {
+    margin-left: 3.5em;
+  }
+
+  .wrapper-about {
+    min-width: 600px;
+    transform: translate(-30%, 0);
+  }
+
+  .float-box {
+    float: left;
+    width: 250px;
+    height: 350px;
+  }
+
+  .wrapper-header-img {
+    transform: translate(15%, -30%);
+  }
+}
+
+/* Phone layout */
+@media screen and (max-width: 700px) {
+  .wrapper-about {
+    background-color: red;
+  }
+}
