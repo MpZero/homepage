@@ -263,6 +263,7 @@ h4 {
 
 /* Tablet layout */
 @media screen and (max-width: 900px) {
+  /* Header start */
   .wrapper-header {
     align-items: center;
   }
@@ -285,6 +286,17 @@ h4 {
   .wrapper-header-img {
     transform: translate(15%, -30%);
   }
+
+  /* Header end */
+
+  /* Main start */
+  .wrapper-main {
+    grid-template-areas: "h2 h2";
+  }
+  /* Main end */
+
+  /* Footer start */
+  /* Footer end */
 }
 
 /* Phone layout */
