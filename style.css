@@ -8,7 +8,7 @@
   --shadow-color: 0deg 0% 0%;
   --shadow-elevation-low: -0.2px 0.5px 0.6px hsl(var(--shadow-color) / 0.1),
     -0.6px 1.7px 2.1px -2.1px hsl(var(--shadow-color) / 0.11);
-  --shadow-elevation-medium: -0.2px 0.5px 0.6px hsl(var(--shadow-color) / 0.09),
+  --shadow-elevation-medium: -0.2px 0.5px 10.6px hsl(var(--shadow-color) / 0.09),
     -0.8px 2.4px 3px -1px hsl(var(--shadow-color) / 0.1),
     -2.9px 8.6px 10.8px -2.1px hsl(var(--shadow-color) / 0.11);
   --shadow-elevation-high: -0.2px 0.5px 0.6px hsl(var(--shadow-color) / 0.08),
@@ -124,7 +124,7 @@ h2 {
 
 /* Main start */
 main {
-  margin-block: 3em;
+  padding-block: 5em;
 }
 
 .wrapper-main {
@@ -209,7 +209,7 @@ h3 {
 }
 
 .footer-left {
-  margin-left: 1.5em;
+  padding-left: 1.5em;
   display: flex;
   flex-direction: column;
 }
@@ -267,6 +267,7 @@ h4 {
 
 .footer-right > img {
   width: 100%;
+  max-width: 1080px;
 }
 
 /* Tablet layout */
@@ -274,11 +275,10 @@ h4 {
   /* Header start */
   .wrapper-header {
     align-items: center;
+    padding-left: 3.5em;
   }
 
   .wrapper-header-img {
-    margin-left: 3.5em;
-
     transform: translate(15%, -15%);
   }
 
@@ -304,42 +304,31 @@ h4 {
     grid-template-areas: "h2 h2";
   }
   /* Main end */
-
-  /* Footer start */
-  .footer-left {
-    margin-left: 0;
-  }
-  /* .footer-right {
-     min-width: 360px; 
-    padding-right: 1em;
-  } */
-
-  /* Footer end */
 }
 
 /* Phone layout */
 @media screen and (max-width: 700px) {
   /* Header start */
+
   .wrapper-header-skew::after {
     transform: translateY(-600px) skewY(-12deg);
   }
   .wrapper-header {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   .wrapper-header-img {
     padding: 1em;
     margin: 0;
-    transform: translate(0, 180px);
+    transform: translate(0px, 0px);
+    max-height: 400px;
   }
 
   .header-img {
     margin: 0;
     max-width: 280px;
-    /* max-height: 400px;
-    text-wrap: wrap;
-    display: flex; */
   }
 
   h1 {
@@ -351,7 +340,6 @@ h4 {
   .wrapper-about {
     transform: translateX(1.5em);
     min-width: 320px;
-    /* max-height: 600px; */
     padding: 1em;
     margin-block: 0.5em;
     box-shadow: none;
@@ -371,6 +359,7 @@ h4 {
     padding: 0.5em;
   }
   /* Header end */
+
   /* Main start */
 
   h2 {
@@ -381,6 +370,7 @@ h4 {
     padding: 1em;
   }
   /* Main end */
+
   /* Footer start */
   .footer {
     grid-template-columns: auto;
@@ -388,7 +378,7 @@ h4 {
   }
 
   .footer-left {
-    padding: 1em;
+    padding: 1.5em;
   }
 
   .wrapper-footer-icon {
